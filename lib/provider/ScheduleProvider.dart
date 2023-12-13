@@ -19,6 +19,8 @@ class ScheduleProvider with ChangeNotifier {
     initialize();
   }
 
+  set time(DateTime time) {}
+
   Future<void> initialize() async {
     String? schedulesFromPrefs = await DBController.getSchedules();
     if (schedulesFromPrefs != null) {

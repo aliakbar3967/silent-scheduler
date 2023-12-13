@@ -57,116 +57,116 @@ class _HomeScreenState extends State<HomeScreen> {
               CupertinoPageRoute(builder: (context) => HelpScreen()),
             ).then((response) => null),
           ),
-          IconButton(
-              onPressed: () async => customBottomSheet(
-                    context,
-                    [
-                      Card(
-                        // shape: StadiumBorder(),
-                        child: ListTile(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0),
-                          ),
-                          leading: const Icon(Icons.settings),
-                          title: const Text('Settings'),
-                          onTap: () => Navigator.push(
-                            context,
-                            CupertinoPageRoute(
-                                builder: (context) => SettingsScreen()),
-                          ).then((response) => null),
-                        ),
-                      ),
-                      Card(
-                        // shape: StadiumBorder(),
-                        child: ListTile(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0),
-                          ),
-                          leading: const Icon(Icons.share),
-                          title: const Text('Share'),
-                          onTap: () => Share.share(
-                              "Masjid Mode - A Complete App for Muslims. Please visit https://play.google.com/store/apps/details?id= and download this awesome app.",
-                              subject: 'Masjid Mode - A Complete App for Muslims.'),
-                        ),
-                      ),
-                      Card(
-                        // shape: StadiumBorder(),
-                        child: ListTile(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0),
-                          ),
-                          leading: const Icon(Icons.star),
-                          title: const Text('Rate'),
-                          onTap: () async => await canLaunchUrl(Uri.parse(
-                                  "https://play.google.com/store/apps/details?id=com.cip.masjidmode"))
-                              ? await launchUrl(Uri.parse(
-                                  "https://play.google.com/store/apps/details?id=com.cip.masjidmode"))
-                              : throw 'Could not launch',
-                        ),
-                      ),
-                      Card(
-                        // shape: StadiumBorder(),
-                        child: ListTile(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0),
-                          ),
-                          leading: const Icon(Icons.privacy_tip),
-                          title: const Text('Privacy Policy'),
-                          onTap: () async => await canLaunchUrl(Uri.parse(
-                                  "https://masjidmode.org/privacy.html"))
-                              ? await launchUrl(Uri.parse(
-                                  "https://masjidmode.org/privacy.html"))
-                              : throw 'Could not launch',
-                        ),
-                      ),
-                      Card(
-                        // shape: StadiumBorder(),
-                        child: ListTile(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0),
-                          ),
-                          leading: const Icon(Icons.help),
-                          title: const Text('Help'),
-                          onTap: () => Navigator.push(
-                            context,
-                            CupertinoPageRoute(
-                                builder: (context) => HelpScreen()),
-                          ).then((response) => null),
-                        ),
-                      ),
-                      Card(
-                        // shape: StadiumBorder(),
-                        child: ListTile(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0),
-                          ),
-                          leading: const Icon(Icons.info),
-                          title: const Text('About'),
-                          onTap: () => Navigator.push(
-                            context,
-                            CupertinoPageRoute(
-                                builder: (context) => AppInfoScreen()),
-                          ).then((response) => null),
-                        ),
-                      ),
-                      Card(
-                        // shape: StadiumBorder(),
-                        child: ListTile(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0),
-                          ),
-                          leading: const Icon(Icons.apps),
-                          title: const Text('More Apps'),
-                          onTap: () async => await canLaunchUrl(Uri.parse(
-                                  "https://play.google.com/store/apps/dev?id=6104175614035929696"))
-                              ? await launchUrl(Uri.parse(
-                                  "https://play.google.com/store/apps/dev?id=6104175614035929696"))
-                              : throw 'Could not launch',
-                        ),
-                      ),
-                    ],
-                  ),
-              icon: Icon(Icons.more_vert)),
+          // IconButton(
+          //     onPressed: () async => customBottomSheet(
+          //           context,
+          //           [
+          //             Card(
+          //               // shape: StadiumBorder(),
+          //               child: ListTile(
+          //                 shape: RoundedRectangleBorder(
+          //                   borderRadius: BorderRadius.circular(0),
+          //                 ),
+          //                 leading: const Icon(Icons.settings),
+          //                 title: const Text('Settings'),
+          //                 onTap: () => Navigator.push(
+          //                   context,
+          //                   CupertinoPageRoute(
+          //                       builder: (context) => SettingsScreen()),
+          //                 ).then((response) => null),
+          //               ),
+          //             ),
+          //             Card(
+          //               // shape: StadiumBorder(),
+          //               child: ListTile(
+          //                 shape: RoundedRectangleBorder(
+          //                   borderRadius: BorderRadius.circular(0),
+          //                 ),
+          //                 leading: const Icon(Icons.share),
+          //                 title: const Text('Share'),
+          //                 onTap: () => Share.share(
+          //                     "Masjid Mode - A Complete App for Muslims. Please visit https://play.google.com/store/apps/details?id= and download this awesome app.",
+          //                     subject: 'Masjid Mode - A Complete App for Muslims.'),
+          //               ),
+          //             ),
+          //             Card(
+          //               // shape: StadiumBorder(),
+          //               child: ListTile(
+          //                 shape: RoundedRectangleBorder(
+          //                   borderRadius: BorderRadius.circular(0),
+          //                 ),
+          //                 leading: const Icon(Icons.star),
+          //                 title: const Text('Rate'),
+          //                 onTap: () async => await canLaunchUrl(Uri.parse(
+          //                         "https://play.google.com/store/apps/details?id=com.cip.masjidmode"))
+          //                     ? await launchUrl(Uri.parse(
+          //                         "https://play.google.com/store/apps/details?id=com.cip.masjidmode"))
+          //                     : throw 'Could not launch',
+          //               ),
+          //             ),
+          //             Card(
+          //               // shape: StadiumBorder(),
+          //               child: ListTile(
+          //                 shape: RoundedRectangleBorder(
+          //                   borderRadius: BorderRadius.circular(0),
+          //                 ),
+          //                 leading: const Icon(Icons.privacy_tip),
+          //                 title: const Text('Privacy Policy'),
+          //                 onTap: () async => await canLaunchUrl(Uri.parse(
+          //                         "https://masjidmode.org/privacy.html"))
+          //                     ? await launchUrl(Uri.parse(
+          //                         "https://masjidmode.org/privacy.html"))
+          //                     : throw 'Could not launch',
+          //               ),
+          //             ),
+          //             Card(
+          //               // shape: StadiumBorder(),
+          //               child: ListTile(
+          //                 shape: RoundedRectangleBorder(
+          //                   borderRadius: BorderRadius.circular(0),
+          //                 ),
+          //                 leading: const Icon(Icons.help),
+          //                 title: const Text('Help'),
+          //                 onTap: () => Navigator.push(
+          //                   context,
+          //                   CupertinoPageRoute(
+          //                       builder: (context) => HelpScreen()),
+          //                 ).then((response) => null),
+          //               ),
+          //             ),
+          //             Card(
+          //               // shape: StadiumBorder(),
+          //               child: ListTile(
+          //                 shape: RoundedRectangleBorder(
+          //                   borderRadius: BorderRadius.circular(0),
+          //                 ),
+          //                 leading: const Icon(Icons.info),
+          //                 title: const Text('About'),
+          //                 onTap: () => Navigator.push(
+          //                   context,
+          //                   CupertinoPageRoute(
+          //                       builder: (context) => AppInfoScreen()),
+          //                 ).then((response) => null),
+          //               ),
+          //             ),
+          //             Card(
+          //               // shape: StadiumBorder(),
+          //               child: ListTile(
+          //                 shape: RoundedRectangleBorder(
+          //                   borderRadius: BorderRadius.circular(0),
+          //                 ),
+          //                 leading: const Icon(Icons.apps),
+          //                 title: const Text('More Apps'),
+          //                 onTap: () async => await canLaunchUrl(Uri.parse(
+          //                         "https://play.google.com/store/apps/dev?id=6104175614035929696"))
+          //                     ? await launchUrl(Uri.parse(
+          //                         "https://play.google.com/store/apps/dev?id=6104175614035929696"))
+          //                     : throw 'Could not launch',
+          //               ),
+          //             ),
+          //           ],
+          //         ),
+          //     icon: Icon(Icons.more_vert)),
         ],
       ),
       body: SafeArea(

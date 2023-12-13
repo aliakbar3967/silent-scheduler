@@ -173,18 +173,13 @@ Widget bottomNavigationBar(BuildContext context) {
                     label: Text('90m'),
                   ),
                 ),
-                GestureDetector(
-                  onTap: () => scheduleProvider.quick(120),
-                  child: Chip(
-                    label: Text('2h'),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () => scheduleProvider.quick(180),
-                  child: Chip(
-                    label: Text('3h'),
-                  ),
-                ),
+                // GestureDetector(
+                //   onTap: () => scheduleProvider.quick(120),
+                //   child: Chip(
+                //     label: Text('2h'),
+                //   ),
+                // ),
+                
               ],
             ),
           ),

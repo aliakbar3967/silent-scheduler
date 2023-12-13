@@ -2,10 +2,12 @@ import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
 import 'package:clear_all_notifications/clear_all_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+
 import 'package:ytquran/provider/ScheduleProvider.dart';
 import 'package:ytquran/provider/SettingsProvider.dart';
-import 'package:ytquran/home.dart';
-import 'package:ytquran/views/home.dart';
+
+
 import 'NavigationScreen.dart';
 import 'constant.dart';
 import 'job/Algorithm.dart';
@@ -25,6 +27,9 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => ScheduleProvider()),
         ChangeNotifierProvider(create: (_) => SettingsProvider()),
+        
+
+        
         // Provider<ScheduleController>(create: (context) => ScheduleController())
       ],
       child: const MyApp(),
@@ -48,15 +53,38 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // title: 'Masjid Mode', 
       theme: Constant.lightMode,
       darkTheme: Constant.darkMode,
       themeMode: Provider.of<SettingsProvider>(context).settings.theme,
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: NavigationScreen(),
     );
-  }
+  } 
 }
+
+
+
+
+
+    
+
+
+//      return MultiProvider(
+//       providers: [
+
+//         ChangeNotifierProvider(create: (context) => PlaceProvider()),
+//       ],
+//     child MaterialApp(
+//       // title: 'Masjid Mode', 
+//       theme: Constant.lightMode,
+//       darkTheme: Constant.darkMode,
+//       themeMode: Provider.of<SettingsProvider>(context).settings.theme,
+//       debugShowCheckedModeBanner: false,
+//       home: HomePage(),
+//     );
+//     );
+//   }
+// }
 
 
 
